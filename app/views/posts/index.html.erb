@@ -47,6 +47,24 @@
     <small>
       <%= post.created_at.strftime("%Y-%m-%d %H:%M") %>
     </small>
+    <h4>Comments</h4>
+
+<% post.comments.each do |comment| %>
+  <div>
+    <strong><%= comment.user.email %></strong>
+    <p><%= comment.content %></p>
+  </div>
+<% end %>
+
+<%= form_with model: [post, Comment.new] do |form| %>
+  <div>
+    <%= form.text_area :content, placeholder: "Write a comment" %>
+  </div>
+
+  <div>
+    <%= form.submit "Comment" %>
+  </div>
+<% end %>
   </div>
 
   <hr>
