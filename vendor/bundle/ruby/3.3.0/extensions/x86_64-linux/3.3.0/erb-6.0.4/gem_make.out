@@ -1,0 +1,19 @@
+current directory: /home/pawel4449/repos/6r/odin-book/odinbook/vendor/bundle/ruby/3.3.0/gems/erb-6.0.4/ext/erb/escape
+/home/pawel4449/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+checking for rb_ext_ractor_safe() in ruby.h... yes
+creating Makefile
+
+current directory: /home/pawel4449/repos/6r/odin-book/odinbook/vendor/bundle/ruby/3.3.0/gems/erb-6.0.4/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260607-6905-rzvg7v sitelibdir\=./.gem.20260607-6905-rzvg7v clean
+
+current directory: /home/pawel4449/repos/6r/odin-book/odinbook/vendor/bundle/ruby/3.3.0/gems/erb-6.0.4/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260607-6905-rzvg7v sitelibdir\=./.gem.20260607-6905-rzvg7v
+compiling escape.c
+linking shared-object erb/escape.so
+
+current directory: /home/pawel4449/repos/6r/odin-book/odinbook/vendor/bundle/ruby/3.3.0/gems/erb-6.0.4/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260607-6905-rzvg7v sitelibdir\=./.gem.20260607-6905-rzvg7v install
+/usr/bin/install -c -m 0755 escape.so ./.gem.20260607-6905-rzvg7v/erb
+
+current directory: /home/pawel4449/repos/6r/odin-book/odinbook/vendor/bundle/ruby/3.3.0/gems/erb-6.0.4/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20260607-6905-rzvg7v sitelibdir\=./.gem.20260607-6905-rzvg7v clean

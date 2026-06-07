@@ -1,0 +1,19 @@
+current directory: /home/pawel4449/repos/6r/odin-book/odinbook/vendor/bundle/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+/home/pawel4449/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/pawel4449/repos/6r/odin-book/odinbook/vendor/bundle/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260607-6905-lgsbrd sitelibdir\=./.gem.20260607-6905-lgsbrd clean
+
+current directory: /home/pawel4449/repos/6r/odin-book/odinbook/vendor/bundle/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260607-6905-lgsbrd sitelibdir\=./.gem.20260607-6905-lgsbrd
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/pawel4449/repos/6r/odin-book/odinbook/vendor/bundle/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260607-6905-lgsbrd sitelibdir\=./.gem.20260607-6905-lgsbrd install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20260607-6905-lgsbrd/debug
+
+current directory: /home/pawel4449/repos/6r/odin-book/odinbook/vendor/bundle/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260607-6905-lgsbrd sitelibdir\=./.gem.20260607-6905-lgsbrd clean
