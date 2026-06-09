@@ -1,0 +1,32 @@
+<h1>Edit profile</h1>
+
+<%= form_with model: @profile, url: profile_path do |form| %>
+  <% if @profile.errors.any? %>
+    <ul>
+      <% @profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :bio %><br>
+    <%= form.text_area :bio %>
+  </div>
+
+  <div>
+    <%= form.label :location %><br>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.submit "Save profile" %>
+  </div>
+<% end %>
+
+<%= link_to "Back", profile_path %>

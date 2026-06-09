@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "profiles/show"
+  get "profiles/edit"
+  get "profiles/update"
   get "posts/index"
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -12,6 +15,9 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   root "posts#index"
+
+      resource :profile, only: [:show, :edit, :update]
+
   resources :posts do 
     resources :comments, only: [:create]
     resources :likes, only: [:create, :destroy]

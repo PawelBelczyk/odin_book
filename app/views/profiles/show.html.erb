@@ -1,0 +1,32 @@
+<h1>My profile</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @profile.bio %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @profile.location %>
+</p>
+
+<%= link_to "Edit profile", edit_profile_path %>
+<%= link_to "Back to feed", root_path %>
+
+<hr>
+
+<h2>My posts</h2>
+
+<% @posts.each do |post| %>
+  <div>
+    <p><%= post.content %></p>
+    <small><%= post.created_at.strftime("%Y-%m-%d %H:%M") %></small>
+  </div>
+
+  <hr>
+<% end %>
