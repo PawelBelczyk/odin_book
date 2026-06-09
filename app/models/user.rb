@@ -20,4 +20,17 @@ class User < ApplicationRecord
          class_name: "FollowRequest",
          foreign_key: :followed_id,
          dependent: :destroy
+
+
+         def following
+        User.joins(:received_follow_requests)
+       .where(follow_requests: {
+        follower_id: id,
+        status: "accepted"
+       })
+        end
+
+        def following_ids
+      following.pluck(:id)
+        end
 end

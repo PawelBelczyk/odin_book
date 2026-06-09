@@ -1,7 +1,12 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.includes(:user, :likes, comments: :user).order(created_at: :desc)
-    @post = Post.new
+  visible_user_ids = current_user.following_ids + [current_user.id]
+
+  @posts = Post.includes(:user, :likes, comments: :user)
+               .where(user_id: visible_user_ids)
+               .order(created_at: :desc)
+
+  @post = Post.new
   end
 
   def create
