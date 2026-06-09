@@ -20,7 +20,12 @@ Rails.application.routes.draw do
 
       resource :profile, only: [:show, :edit, :update]
       resources :users, only: [:index, :show]
-      resources :follow_requests, only: [:create, :update, :destroy]
+      resources :follow_requests, only: [:create, :update, :destroy] do
+        member do
+          patch :reject
+        end
+      end
+      
 
   resources :posts do 
     resources :comments, only: [:create]

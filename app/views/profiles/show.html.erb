@@ -30,7 +30,8 @@
     </p>
 
     <%= button_to "Accept", follow_request_path(follow_request), method: :patch %>
-  </div>
+    </div>
+    <%= button_to "Reject", reject_follow_request_path(follow_request), method: :patch %>
 <% end %>
 
 <h2>My posts</h2>

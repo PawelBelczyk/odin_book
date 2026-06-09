@@ -8,4 +8,15 @@ class FollowRequest < ApplicationRecord
   def accepted?
   status == "accepted"
   end
+
+
+  def reject
+   @follow_request = current_user.received_follow_requests.find(params  [:id])
+
+   if @follow_request.update(status: "rejected")
+    redirect_to profile_path, notice: "Follow request rejected."
+    else
+    redirect_to profile_path, alert: "Could not reject follow request."
+    end
+  end
 end
