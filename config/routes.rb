@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "users/index"
+  get "users/show"
   get "profiles/show"
   get "profiles/edit"
   get "profiles/update"
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
   root "posts#index"
 
       resource :profile, only: [:show, :edit, :update]
+      resources :users, only: [:index, :show]
 
   resources :posts do 
     resources :comments, only: [:create]

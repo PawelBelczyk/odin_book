@@ -1,0 +1,34 @@
+<h1>User profile</h1>
+
+<%= link_to "Back to users", users_path %>
+<%= link_to "Back to feed", root_path %>
+
+<hr>
+
+<p>
+  <strong>Name:</strong>
+  <%= @profile&.name || @user.email %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @profile&.bio %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @profile&.location %>
+</p>
+
+<hr>
+
+<h2>Posts</h2>
+
+<% @posts.each do |post| %>
+  <div>
+    <p><%= post.content %></p>
+    <small><%= post.created_at.strftime("%Y-%m-%d %H:%M") %></small>
+  </div>
+
+  <hr>
+<% end %>

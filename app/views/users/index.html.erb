@@ -1,0 +1,21 @@
+<h1>All users</h1>
+
+<%= link_to "Back to feed", root_path %>
+
+<hr>
+
+<% @users.each do |user| %>
+  <div>
+    <p>
+      <strong><%= user.profile&.name || user.email %></strong>
+    </p>
+
+    <p>
+      <%= user.email %>
+    </p>
+
+    <%= link_to "View profile", user_path(user) %>
+  </div>
+
+  <hr>
+<% end %>
