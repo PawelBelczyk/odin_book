@@ -23,4 +23,11 @@ class FollowRequestsController < ApplicationController
       redirect_to profile_path, alert: "Could not accept follow request."
     end
   end
+
+  def destroy
+  @follow_request = current_user.sent_follow_requests.find(params[:id])
+  @follow_request.destroy
+
+  redirect_to users_path, notice: "Unfollowed."
+  end
 end
