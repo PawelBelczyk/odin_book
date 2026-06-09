@@ -19,6 +19,19 @@
 <%= link_to "Back to feed", root_path %>
 
 <hr>
+<hr>
+
+<h2>Follow requests</h2>
+
+<% @received_follow_requests.each do |follow_request| %>
+  <div>
+    <p>
+      <%= follow_request.follower.email %> wants to follow you.
+    </p>
+
+    <%= button_to "Accept", follow_request_path(follow_request), method: :patch %>
+  </div>
+<% end %>
 
 <h2>My posts</h2>
 

@@ -10,4 +10,14 @@ class User < ApplicationRecord
          has_many :posts, dependent: :destroy
          has_many :likes, dependent: :destroy
          has_one :profile, dependent: :destroy
+
+         has_many :sent_follow_requests,
+         class_name: "FollowRequest",
+         foreign_key: :follower_id,
+         dependent: :destroy
+
+          has_many :received_follow_requests,
+         class_name: "FollowRequest",
+         foreign_key: :followed_id,
+         dependent: :destroy
 end

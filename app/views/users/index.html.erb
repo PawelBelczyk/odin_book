@@ -15,6 +15,13 @@
     </p>
 
     <%= link_to "View profile", user_path(user) %>
+    <% existing_request = current_user.sent_follow_requests.find_by(followed: user) %>
+
+    <% if existing_request %>
+    <p>Status: <%= existing_request.status %></p>
+    <% else %>
+    <%= button_to "Follow", follow_requests_path(followed_id: user.id),   method: :post %>
+    <% end %>
   </div>
 
   <hr>
