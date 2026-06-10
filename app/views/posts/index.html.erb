@@ -29,8 +29,11 @@
   <% end %>
 
   <div>
-    <%= form.text_area :content, placeholder: "What are you thinking?" %>
+    <%= form.text_area :content, placeholder: "Wpisz tu swoją treść" %>
   </div>
+<div>
+  <%= form.file_field :image %>
+</div>
 
   <div>
     <%= form.submit "Post" %>
@@ -50,6 +53,9 @@
     <p>
       <%= post.content %>
     </p>
+    <% if post.image.attached? %>
+  <%= image_tag post.image, width: 400 %>
+<% end %>
 
     <small>
       <%= post.created_at.strftime("%Y-%m-%d %H:%M") %>
