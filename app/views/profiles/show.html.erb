@@ -1,5 +1,9 @@
 <h1>My profile</h1>
 
+<% if @profile.avatar.attached? %>
+  <%= image_tag @profile.avatar, width: 150 %>
+<% end %>
+
 <p>
   <strong>Name:</strong>
   <%= @profile.name %>
